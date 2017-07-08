@@ -35,31 +35,31 @@ server.on('connection', (socket)=>{
 	  case '/hydrogen.html':
 	  socket.write(writeHeader('Ok', 'index/html', readHydrogen)); // calles writeHeader function and input paramenters
 	  console.log('hydrogen');
-	  socket.end('end');    
+	  // socket.end('end');    
 	  break;
 
 	  case "/index.html":
 	  socket.write(writeHeader('OK', 'index/html', readIndex));
 	  console.log('index');
-	  socket.end();
+	  // socket.end();
 	  break;
 
 	  case "/helium.html":
 	  socket.write(writeHeader('OK','index/html',readHelium));
 	  console.log('helium');
-	  socket.end();
+	  // socket.end();
 	  break;
 
 	  case "/404.html":
 	  socket.write(writeHeader('OK', 'index/html', read404));
 	  console.log('404');
-	  socket.end();
+	  // socket.end();
 	  break;
 
 	  case "/":
 	  socket.write(writeHeader('OK', 'index/html', readIndex));
 	  console.log('/index');
-	  socket.end();
+	  // socket.end();
 	  break;
 
 	  default: 
